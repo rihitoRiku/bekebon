@@ -29,7 +29,7 @@ export default function MainHeroSection() {
                 We help your garden and plants grow.
               </div>
             </div>
-            <div className="text-base text-white/90 md:text-lg">
+            <div className="text-base text-white/90 md:text-lg font-roboto">
               At Bekebon, our expertise nurtures both your garden and plants,
               ensuring they flourish and thrive. Discover how we bring green
               spaces to life.

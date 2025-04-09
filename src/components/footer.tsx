@@ -1,5 +1,7 @@
 "use client";
 import React from "react";
+import Image from "next/image";
+import Link from "next/link";
 import { Separator } from "@/components/ui/separator";
 
 export default function Footer() {
@@ -7,15 +9,25 @@ export default function Footer() {
     <div>
       <Separator className="mt-20 bg-neutral-800" />
       <div className="mx-auto max-w-screen-2xl px-4 py-12">
-        <div className="">{/* Logo */}</div>
-        <div className="flex flex-col justify-between text-sm md:text-base lg:flex-row gap-6 lg:gap-0">
-          <ul className="flex flex-wrap lg:gap-8 gap-4 text-neutral-300">
-            <li>Project</li>
-            <li>Our Story</li>
-            <li>About Us</li>
-            <li>Support</li>
-            <li>Careers</li>
-            <li>Blog</li>
+        <div className="">
+          <div className="relative mb-6 aspect-[3/1] w-48">
+            {/* Logo */}
+            <Image
+              src="/assets/logotextpng.png"
+              alt="logotext"
+              fill
+              className="object-contain"
+            />
+          </div>
+        </div>
+        <div className="flex flex-col justify-between gap-6 text-sm md:text-base lg:flex-row lg:gap-0">
+          <ul className="flex flex-wrap gap-4 text-neutral-300 lg:gap-8">
+            <Link href="#">Project</Link>
+            <Link href="#">Our Story</Link>
+            <Link href="#">About Us</Link>
+            <Link href="#">Support</Link>
+            <Link href="#">Careers</Link>
+            <Link href="#">Blog</Link>
           </ul>
           <div className="flex gap-8 text-neutral-300">
             <div className="">
@@ -30,15 +42,15 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-12 flex flex-col justify-between text-sm text-neutral-400 md:text-base lg:flex-row text-center lg:text-start gap-2">
+        <div className="mt-12 flex flex-col justify-between gap-2 text-center text-sm text-neutral-400 md:text-base lg:flex-row lg:text-start">
           <div className="flex-wrap">
-            <a href="#">Privacy Policy | </a>
-            <a href="#">Terms of Use | </a>
-            <a href="#">Sales and Refunds | </a>
-            <a href="#">Legal | </a>
-            <a href="#">Site Map</a>
+            <Link href="#">Privacy Policy | </Link>
+            <Link href="#">Terms of Use | </Link>
+            <Link href="#">Sales and Refunds | </Link>
+            <Link href="#">Legal | </Link>
+            <Link href="#">Site Map</Link>
           </div>
-          <div className="">Copyright 2025. All rights reserved</div>
+          <div className="">Copyright © Bekebon. All rights reserved</div>
         </div>
       </div>
     </div>

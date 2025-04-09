@@ -7,12 +7,23 @@ export default function ThirdSection() {
   return (
     <div>
       <div className="py-20">
-        <div className="mx-auto mb-20 max-w-screen-xl px-4 text-center">
-          <div className="">{/* Logo */}</div>
+        <div
+          data-aos="zoom-in"
+          className="mx-auto mb-20 max-w-screen-xl px-4 text-center"
+        >
+          <div className="size-24 relative mx-auto mb-6">
+            {/* Logo */}
+            <Image
+              src="/assets/logo.png"
+              alt="logotext"
+              fill
+              className="object-contain"
+            />
+          </div>
           <div className="mb-6 text-3xl text-yellow-200 md:mb-8 md:text-4xl">
             Revolutionizing Planting: Effortless Gardening Made Possible
           </div>
-          <div className="text-sm text-neutral-400 md:text-base">
+          <div className="font-roboto text-sm text-neutral-400 md:text-base">
             Introducing a breakthrough in gardening! We've made the planting
             experience easier than ever before. Whether you're a seasoned
             gardener or just starting out, our innovative solutions streamline
@@ -40,21 +51,24 @@ export default function ThirdSection() {
 
             <div className="relative mx-auto max-w-screen-2xl px-4 md:px-8">
               {/* Content */}
-              <div className="md:justify-between flex flex-col md:flex-row h-[44rem] md:items-end justify-end pb-[6rem] gap-6">
-                <div className="flex max-w-[48rem] flex-col gap-6">
+              <div className="flex h-[44rem] flex-col justify-end gap-6 pb-[6rem] md:flex-row md:items-end md:justify-between">
+                <div
+                  data-aos="fade-right"
+                  className="flex max-w-[48rem] flex-col gap-6"
+                >
                   <div className="">
                     <div className="text-3xl text-yellow-200 md:text-4xl">
                       Start with smile and love
                     </div>
                   </div>
-                  <div className="text-sm text-neutral-300 md:text-base">
+                  <div className="font-roboto text-sm text-neutral-300 md:text-base">
                     At Bekebon, our expertise nurtures both your garden and
                     plants, ensuring they flourish and thrive. Discover how we
                     bring green spaces to life.
                   </div>
                 </div>
 
-                <div className="">
+                <div data-aos="fade-left" className="">
                   <Button className="h-10 max-w-[12rem] rounded-full bg-yellow-200 text-base text-black transition-colors hover:bg-yellow-300 md:h-12 md:max-w-[14rem] lg:text-lg">
                     Collaborate with us
                   </Button>
