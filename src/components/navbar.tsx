@@ -15,7 +15,13 @@ import {
 import { Button } from "@/components/ui/button";
 import { HiMenuAlt3 } from "react-icons/hi";
 
+
 export default function Navbar() {
+
+  const phoneNumber = "082123456790";
+  const message = "Hello! I'm interested in learning more about your services.";
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -95,9 +101,11 @@ export default function Navbar() {
               </Link>
             </div>
           </div>
-          <Button
-            variant={"nodefault"}
-            className="hidden items-center gap-2 rounded-full border border-green-700 py-6 md:flex"
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden items-center gap-2 rounded-full border border-green-700 px-4 py-2 md:flex"
           >
             <div className="relative size-8">
               <Image
@@ -109,7 +117,7 @@ export default function Navbar() {
               />
             </div>
             <p className="text-sm font-medium text-white">Contact Us</p>
-          </Button>
+          </a>
         </div>
         {/* Mobile Navigation */}
         <Sheet open={open} onOpenChange={setOpen}>
@@ -129,7 +137,7 @@ export default function Navbar() {
               <SheetTitle className=""></SheetTitle>
               <SheetDescription></SheetDescription>
             </SheetHeader>
-            <nav className="font-nunito mt-8 flex flex-col items-end gap-12 text-end text-xl font-medium text-neutral-200 h-full">
+            <nav className="font-nunito mt-8 flex h-full flex-col items-end gap-12 text-end text-xl font-medium text-neutral-200">
               <Link
                 href="#"
                 onClick={(e) => {
@@ -205,9 +213,11 @@ export default function Navbar() {
               >
                 <h4>Support</h4>
               </Link>
-              <Button
-                variant={"nodefault"}
-                className=" items-center gap-2 rounded-full py-6 w-fit flex -me-4  "
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="-me-4 flex items-center gap-2 rounded-full border-green-700 px-4 py-2"
               >
                 <div className="relative size-8">
                   <Image
@@ -218,8 +228,8 @@ export default function Navbar() {
                     priority
                   />
                 </div>
-                <p className="text-lg font-medium text-white">Contact Us</p>
-              </Button>
+                <p className="text-xl font-medium text-neutral-200">Contact Us</p>
+              </a>
             </nav>
           </SheetContent>
         </Sheet>

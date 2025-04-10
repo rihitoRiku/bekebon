@@ -3,8 +3,13 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Separator } from "@/components/ui/separator";
+import MapComponent from "./mapcomponent";
 
 export default function Footer() {
+  interface MapProps {
+    lat: number;
+    lng: number;
+  }
   return (
     <div>
       <Separator className="mt-20 bg-neutral-800" />
@@ -20,7 +25,7 @@ export default function Footer() {
             />
           </div>
         </div>
-        <div className="flex flex-col justify-between gap-6 text-sm md:text-base lg:flex-row lg:gap-0">
+        <div className="flex flex-col justify-between gap-12 text-sm md:text-base lg:flex-row lg:gap-0">
           <ul className="flex flex-wrap gap-4 text-neutral-300 lg:gap-8">
             <Link href="#">Project</Link>
             <Link href="#">Our Story</Link>
@@ -29,12 +34,15 @@ export default function Footer() {
             <Link href="#">Careers</Link>
             <Link href="#">Blog</Link>
           </ul>
-          <div className="flex gap-8 text-neutral-300">
-            <div className="">
-              <p>Email</p>
-              <p className="text-neutral-500">sales@bekebon.com</p>
+          <div className="flex flex-row gap-4 lg:w-[24rem] lg:flex-col">
+            <div className="mb-6 h-[14rem] w-full max-w-[20rem]">
+              <MapComponent lat={-6.861940096619952} lng={107.59462764880793} />
             </div>
-            <div className="">
+            <div className="flex flex-col gap-8 text-neutral-300 md:flex-row">
+              <div className="">
+                <p>Email</p>
+                <p className="text-neutral-500">sales@bekebon.com</p>
+              </div>
               <div className="">
                 <p>Phone</p>
                 <p className="text-neutral-500">+1 432 6636</p>
